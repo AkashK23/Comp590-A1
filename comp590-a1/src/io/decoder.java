@@ -21,7 +21,7 @@ public class decoder {
 		// input compressed data
 		String path = "data/compressed (2).dat";
 		String path2 = "data/compressed.dat";
-		InputStream inputStream = new FileInputStream(path2);
+		InputStream inputStream = new FileInputStream(path);
 		InputStreamBitSource inputStreamBitSource = new InputStreamBitSource(inputStream);
 		
 		//getting symbol length, creating symbol object, and adding to symbol list
