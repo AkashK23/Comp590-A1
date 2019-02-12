@@ -28,6 +28,8 @@ public class MVNode {
 	public int getLength() {
 		return length;
 	}
+	
+	// giving lengths to each leaf
 	public void setLengths(int length) {
 		if (left != null && right != null) {
 			left.setLengths(length + 1);
@@ -38,18 +40,6 @@ public class MVNode {
 			right.setLengths(length + 1);
 		} else {
 			this.length = length;
-		}
-	}
-	public void printLeafs() {
-		if (left != null && right != null) {
-			left.printLeafs();
-			right.printLeafs();
-		} else if (left != null) {
-			left.printLeafs();
-		} else if (right != null) {
-			right.printLeafs();
-		} else {
-			System.out.println("symbol " + symbol);
 		}
 	}
 }

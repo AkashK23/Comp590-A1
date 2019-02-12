@@ -9,9 +9,7 @@ public class MVNodeCanonicalComparator implements Comparator<MVNode>{
 		if (arg0.getLength() > arg1.getLength()) {
 			return 1;
 		}
-//		return 0;
 		if (arg0.getLength() == arg1.getLength()) {
-			//System.out.println("here");
 			if (arg0.getSymbol() > arg1.getSymbol()) {
 				return 1;
 			}
@@ -20,8 +18,5 @@ public class MVNodeCanonicalComparator implements Comparator<MVNode>{
 			}
 		}
 		return 0;
-//		else {
-//			return -1;
-//		}
 	} 	
 }

@@ -6,10 +6,8 @@ public class Node {
 	Node left;
 	Node right;
 	int symbol;
-	// int length;
 
 	public Node(int length, int symbol) {
-		// this.length = length;
 		if (length == 0) {
 			this.symbol = symbol;
 		}
@@ -36,16 +34,14 @@ public class Node {
 	}
 
 	public Node decodeSymbol(int bit) {
-		// if (this.isLeaf) {
-		// return this;
-		// }
 		if (bit == 0) {
 			return left;
 		} else {
 			return right;
 		}
 	}
-
+	
+	// takes in length of a symbol and the symbol and adds the node to the tree
 	public void insert(int length, int symbol) {
 		if (length == 0) {
 			isFull = true;
@@ -75,6 +71,7 @@ public class Node {
 		}
 	}
 
+	//gets the codeword of each leaf; also constructs a canonical huffman tree
 	public String insertGetCode(int length, int symbol, String codeword) {
 		if (length == 0) {
 			isFull = true;

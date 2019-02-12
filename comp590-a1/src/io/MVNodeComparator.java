@@ -11,7 +11,6 @@ public class MVNodeComparator implements Comparator<MVNode> {
 			return -1;
 		} else if (arg0.getCounts() == arg1.getCounts()) {
 			if (arg0.getHeight() > arg1.getHeight()) {
-				//System.out.println("here");
 				return -1;
 			} else if (arg0.getHeight() < arg1.getHeight()) {
 				return 1;
